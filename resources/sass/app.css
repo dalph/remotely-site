@@ -1,0 +1,30 @@
+#widget {
+  background: rgba(204, 204, 204, 0.24);
+  border: 1px solid;
+  padding: 2px 5px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+#widget #messages {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+#widget #messages .row {
+  padding: 1px 5px;
+}
+#widget #messages .row i {
+  color: #ccc;
+}
+#widget #form {
+  border: 1px solid;
+  height: 150px;
+}
+#widget #form textarea {
+  width: 100%;
+}
+#widget .row {
+  padding: 5px 10px;
+}
+
+/*# sourceMappingURL=app.css.map */
