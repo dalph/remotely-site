@@ -10,6 +10,9 @@
             <widget-component></widget-component>
         </div>
         <link rel="stylesheet" href="/css/app.css">
+        <script>
+            window.page_uid = '{{$page_uid ?? 'no page uid'}}';
+        </script>
         <script src="/js/app.js"></script>
     </body>
 </html>

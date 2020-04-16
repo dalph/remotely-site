@@ -5,7 +5,6 @@ window.Client = {
         return 'uid1';
     },
     _sendData: function (method, params, callback) {
-        console.log(method, params, callback);
         if (null === params || typeof params !== 'object') params = {};
         params.page_uid = this._getPageUid();
         let id = ++this.id;

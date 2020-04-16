@@ -31860,7 +31860,6 @@ window.Client = {
     return 'uid1';
   },
   _sendData: function _sendData(method, params, callback) {
-    console.log(method, params, callback);
     if (null === params || _typeof(params) !== 'object') params = {};
     params.page_uid = this._getPageUid();
     var id = ++this.id;
