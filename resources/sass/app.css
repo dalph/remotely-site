@@ -7,7 +7,7 @@
   bottom: 0;
 }
 #widget #messages {
-  max-height: 150px;
+  max-height: 100px;
   overflow-y: scroll;
 }
 #widget #messages .row {
