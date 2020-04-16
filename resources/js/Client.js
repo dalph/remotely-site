@@ -2,7 +2,7 @@ const axios = require('axios');
 window.Client = {
     id: 0,
     _getPageUid: function(){
-        return 'uid1';
+        return window.page_uid;
     },
     _sendData: function (method, params, callback) {
         if (null === params || typeof params !== 'object') params = {};

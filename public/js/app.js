@@ -31857,7 +31857,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.Client = {
   id: 0,
   _getPageUid: function _getPageUid() {
-    return 'uid1';
+    return window.page_uid;
   },
   _sendData: function _sendData(method, params, callback) {
     if (null === params || _typeof(params) !== 'object') params = {};
