@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\RemoteData;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -31,7 +32,14 @@ class Controller extends BaseController
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
-        return view('widget_local_submit', ['page_uid' => $page_uid]);
+        $messages = [];
+        RemoteData::sGetMessages($page_uid, function($results) use (&$messages){
+            $messages = $results;
+        });
+        return view('widget_local_submit', [
+            'page_uid' => $page_uid,
+            'messages' => $messages,
+        ]);
     }
     public function widget_local_ajax(string $page_uid)
     {

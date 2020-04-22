@@ -12,7 +12,7 @@
                 <textarea name="message" id="message" v-model="message"></textarea>
             </div>
             <div class="row">
-                <button>Отправить</button> (vue_js + remote ajax)
+                <button>Отправить</button>
             </div>
         </form>
         <div id="messages">

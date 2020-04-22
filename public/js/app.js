@@ -19676,8 +19676,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("button", [_vm._v("Отправить")]),
-      _vm._v(" (vue_js + remote ajax)\n        ")
+      _c("button", [_vm._v("Отправить")])
     ])
   }
 ]

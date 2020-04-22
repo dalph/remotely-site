@@ -7,7 +7,30 @@
     </head>
     <body>
         <div id="vue_app">
-            <widget-component></widget-component>
+            <div id="widget">
+                    <form id="form" @submit.prevent="sendMessage()">
+                        <div class="row">
+                            <label for="name">Имя:</label>
+                            <input type="text" name="name" id="name" v-model="name">
+                        </div>
+                        <div class="row">
+                            <label for="message">Сообщение:</label>
+                        </div>
+                        <div class="row">
+                            <textarea name="message" id="message" v-model="message"></textarea>
+                        </div>
+                        <div class="row">
+                            <button>Отправить</button>
+                        </div>
+                    </form>
+                    <div id="messages">
+                        @foreach ($messages as $message)
+                            <div class="row">
+                                <b>{{$message->name}}</b>: <span>{{$message->message}}</span>. <i>({{$message->created}})  | formatDate</i>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
         </div>
         <link rel="stylesheet" href="/css/app.css">
         <script>

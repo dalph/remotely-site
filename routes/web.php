@@ -17,3 +17,5 @@ Route::get('/', 'Controller@home');
 Route::get('/widget_remote_ajax/{page_uid}', 'Controller@widget_remote_ajax');
 Route::get('/widget_local_submit/{page_uid}', 'Controller@widget_local_submit');
 Route::get('/widget_local_ajax/{page_uid}', 'Controller@widget_local_ajax');
+
+//Route::post('/api', 'ApiController@run');

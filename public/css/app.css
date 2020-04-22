@@ -37,3 +37,7 @@
   display: flex;
 }
 
+.iframes_container .iframe_container {
+  flex-grow: 1;
+}
+
