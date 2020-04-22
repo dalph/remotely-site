@@ -33,8 +33,12 @@
             }
         },
         methods: {
-            addMessage(messageData) {
-                this.messages.unshift(messageData);
+            addMessage(messageData, toTop = false) {
+                if (toTop){
+                    this.messages.unshift(messageData);
+                } else {
+                    this.messages.push(messageData);
+                }
             },
             sendMessage() {
                 let _this = this;
@@ -42,7 +46,7 @@
                     name: this.name,
                     message: this.message
                 }, function(data){
-                    _this.addMessage(data);
+                    _this.addMessage(data, true);
                 })
                 _this.message = '';
                 return false;

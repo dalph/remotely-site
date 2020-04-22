@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="/css/app.css">
         <script>
             window.page_uid = '{{$page_uid ?? 'no page uid'}}';
-            window.api_url = '/api';
+            window.api_url = '/api/{{$page_uid ?? 'no page uid'}}';
         </script>
         <script src="/js/app.js"></script>
     </body>

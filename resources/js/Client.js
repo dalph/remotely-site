@@ -25,8 +25,10 @@ window.Client = {
                     alert(data.error.code + ': ' + data.error.message);
                     return;
                 }
-                if (data.id !== id){
+                if (+data.id !== +id){
                     alert('Wrong id');
+                    console.log(id);
+                    console.log(data.id);
                 }
                 if (typeof callback === 'function') {
                     callback(data.result);

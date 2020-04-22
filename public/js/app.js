@@ -1943,7 +1943,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     addMessage: function addMessage(messageData) {
-      this.messages.unshift(messageData);
+      var toTop = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+      if (toTop) {
+        this.messages.unshift(messageData);
+      } else {
+        this.messages.push(messageData);
+      }
     },
     sendMessage: function sendMessage() {
       var _this = this;
@@ -1952,7 +1958,7 @@ __webpack_require__.r(__webpack_exports__);
         name: this.name,
         message: this.message
       }, function (data) {
-        _this.addMessage(data);
+        _this.addMessage(data, true);
       });
       _this.message = '';
       return false;
@@ -31888,8 +31894,10 @@ window.Client = {
         return;
       }
 
-      if (data.id !== id) {
+      if (+data.id !== +id) {
         alert('Wrong id');
+        console.log(id);
+        console.log(data.id);
       }
 
       if (typeof callback === 'function') {

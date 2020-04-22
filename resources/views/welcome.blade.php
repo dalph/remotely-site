@@ -101,7 +101,7 @@
             </div>
             <div class="iframe_container">
                 <h2>Local Ajax</h2>
-{{--                <iframe src="/widget_local_ajax/uid1" width="300" height="300" frameborder="0"></iframe>--}}
+                <iframe src="/widget_local_ajax/uid1" width="300" height="300" frameborder="0"></iframe>
             </div>
         </div>
     </div>
