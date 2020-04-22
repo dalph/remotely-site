@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Widget</title>
+        <title>Widget Local Ajax</title>
     </head>
     <body>
         <div id="vue_app">
@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/css/app.css">
         <script>
             window.page_uid = '{{$page_uid ?? 'no page uid'}}';
+            window.api_url = '/api';
         </script>
         <script src="/js/app.js"></script>
     </body>

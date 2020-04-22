@@ -5,7 +5,7 @@ if (document.getElementById('vue_app')){
     new Vue({
         el: '#vue_app',
         components: {
-            'widget-component': require('./components/WidgetComponent.vue').default
+            'widget-component': require('./components/WidgetAjaxComponent.vue').default
         }
     });
 }

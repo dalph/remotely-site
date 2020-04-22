@@ -19,11 +19,25 @@ class Controller extends BaseController
         return view('welcome');
     }
 
-    public function widget(string $page_uid)
+    public function widget_remote_ajax(string $page_uid)
     {
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
-        return view('widget', ['page_uid' => $page_uid]);
+        return view('widget_remote_ajax', ['page_uid' => $page_uid]);
+    }
+    public function widget_local_submit(string $page_uid)
+    {
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        return view('widget_local_submit', ['page_uid' => $page_uid]);
+    }
+    public function widget_local_ajax(string $page_uid)
+    {
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        return view('widget_local_ajax', ['page_uid' => $page_uid]);
     }
 }

@@ -90,7 +90,17 @@
             <a href="https://vapor.laravel.com">Vapor</a>
             <a href="https://github.com/laravel/laravel">GitHub</a>
         </div>
-        <iframe src="/widget/uid1" width="300" height="300" frameborder="0"></iframe>
+        <div class="iframes_container">
+            <div class="iframe_container"><h2>Remote Ajax</h2></div>
+            <div class="iframe_container">2</div>
+            <div class="iframe_container">3</div>
+        </div>
+        <div class="col-md-4">1</div>
+        <div class="col-md-4">2</div>
+        <div class="col-md-4">3</div>
+        <iframe src="/widget_remote_ajax/uid1" width="300" height="300" frameborder="0"></iframe>
+        <iframe src="/widget_local_submit/uid1" width="300" height="300" frameborder="0"></iframe>
+        <iframe src="/widget_local_ajax/uid1" width="300" height="300" frameborder="0"></iframe>
     </div>
 </div>
 <link rel="stylesheet" href="/css/app.css?v1.1">

@@ -4,13 +4,21 @@ window.Client = {
     _getPageUid: function(){
         return window.page_uid;
     },
+    _getApiUrl: function(){
+        return window.api_url;
+    },
     _sendData: function (method, params, callback) {
         if (null === params || typeof params !== 'object') params = {};
         params.page_uid = this._getPageUid();
         let id = ++this.id;
         let data = {"jsonrpc": "2.0", "method": method, "params": params, "id": id};
+        let url = this._getApiUrl();
+        if (!url) {
+            alert('url is not set');
+            return;
+        }
         axios
-            .post('http://remotely-data.1test24.ru/api', data)
+            .post(url, data)
             .then(function (response) {
                 let data = response.data;
                 if (data && data.error){
