@@ -26,7 +26,7 @@
                     <div id="messages">
                         @foreach ($messages as $message)
                             <div class="row">
-                                <b>{{$message->name}}</b>: <span>{!! $message->message !!}</span>. <i>({{ \Carbon\Carbon::parse($message->created)->format('d.m.Y H:i:s')}})</i>
+                                <b>{{$message->name}}</b>: <span>{!! $message->message !!}</span>. <i>({{$message->created}})</i>
                             </div>
                         @endforeach
                     </div>

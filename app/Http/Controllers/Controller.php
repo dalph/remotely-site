@@ -40,7 +40,11 @@ class Controller extends BaseController
         }
         $messages = [];
         RemoteData::sGetMessages($page_uid, function($results) use (&$messages){
+            date_default_timezone_set('Asia/Yekaterinburg');
             $messages = $results;
+            array_walk($messages, function (&$message){
+               $message->created = date('d.m.Y H:i', strtotime($message->created));
+            });
         });
         return view('widget_local_submit', [
             'page_uid' => $page_uid,
